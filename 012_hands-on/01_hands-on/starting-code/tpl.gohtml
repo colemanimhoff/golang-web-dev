@@ -5,12 +5,24 @@
     <title>Document</title>
 </head>
 <body>
-
-{{range .}}
-
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
-
-{{end}}
-
+    <main>
+    {{range .}}
+        <section>
+            <h2>Galvanize WDI {{.AcaYear}}</h2>
+            <h3>Galvanize WDI {{.Fall.Term}}</h3>
+            <ul>
+            {{range .Fall.Courses}}
+                <li>{{.Number}} - {{.Name}} - {{.Units}}</li>
+            {{end}}
+            </ul>
+            <h3>Galvanize WDI {{.Spring.Term}}</h3>
+            <ul>
+            {{range .Fall.Courses}}
+                <li>{{.Number}} - {{.Name}} - {{.Units}}</li>
+            {{end}}
+            </ul>
+        </section>
+    {{end}}
+    </main>
 </body>
 </html>
